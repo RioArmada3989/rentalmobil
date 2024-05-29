@@ -4,11 +4,7 @@ error_reporting(0);
 // error_reporting(E_ALL);
 // ini_set('display_errors', '1');
 
-$application_folder = 'app';
-$system_path = 'system';
-$admin_folder = 'admin';
 
-finalbattle 12
 
 if (($_temp = realpath($system_path)) !== FALSE) {
     $system_path = $_temp . DIRECTORY_SEPARATOR;
