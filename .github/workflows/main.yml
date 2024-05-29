@@ -1,20 +1,23 @@
+name: PHP CI
+
 on:
   push:
-    branches: [ testing ]
-name: Testing
-jobs:
-  phpcs:
-    name: Check code
-    runs-on: ubuntu-latest
-    steps:
-    - name: Get latest code
-      uses: actions/checkout@v2.3.2
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-    - name: Use Node.js 12
-      uses: actions/setup-node@v2-beta
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
       with:
-        node-version: '12'
-    - name: Check Code Standard
-      run:
-        composer install
-        composer lint
+        php-version: '8.3'
+    - name: Check PHP version
+      run: php -v
+    - name: Run script Sultan Faiz
+      run: echo "21.11.3980 Sultan faiz"
