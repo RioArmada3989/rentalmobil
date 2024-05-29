@@ -21,7 +21,7 @@ jobs:
         php-version: '8.3'
 
     - name: Install Composer dependencies
-      run: composer install--ignore
+      run: composer install --ignore-platform-req=ext-fileinfo --ignore-platform-req=ext-exif
 
     - name: Run PHP_CodeSniffer
       run: ./vendor/bin/phpcs --standard=PSR12 .
