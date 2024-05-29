@@ -3,6 +3,8 @@ name: testing PHP CI
 on:
   push:
     branches: [ testing ]
+  pull_request:
+    branches: [ testing ]
 
 jobs:
   phpcs:
