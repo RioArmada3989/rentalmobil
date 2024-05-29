@@ -1,5 +1,8 @@
 <?php
-
+require_once _DIR_.'/vendor/autoload.php';
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use PhpOffice\PhpSpreadsheet\Worksheet\Drawing;
 
 
 $spreadsheet = new Spreadsheet();
