@@ -9,7 +9,7 @@ on:
 jobs:
   phpcs:
     name: Check PHP Code Quality
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
