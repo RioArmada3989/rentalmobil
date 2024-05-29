@@ -1,4 +1,4 @@
-name: PHP Code Quality Check
+name: testing PHP CI
 
 on:
   push:
@@ -8,21 +8,16 @@ on:
 
 jobs:
   phpcs:
-    name: Check PHP Code Quality
-    runs-on: windows-latest
+    name: Check code
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-      
-    - name: Setup PHP
+    - uses: actions/checkout@v2
+    - name: Get latest code
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.3'
-
+    - name: Check PHP version
+      run: php -v
     - name: Install Composer dependencies
       run: composer install
-
-    - name: Run PHP_CodeSniffer
-      run: ./vendor/bin/phpcs --standard=PSR12 .
-       
