@@ -11,9 +11,9 @@ if (($_temp = realpath($system_path)) !== FALSE) {
 }
 
 // Path to the system directory
-//define('APPPATH', $application_folder . DIRECTORY_SEPARATOR);
-//define('BASEPATH', $system_path);
-//define('ADMPATH', $admin_folder . DIRECTORY_SEPARATOR);
+define('APPPATH', $application_folder . DIRECTORY_SEPARATOR);
+define('BASEPATH', $system_path);
+define('ADMPATH', $admin_folder . DIRECTORY_SEPARATOR);
 
 require_once __DIR__ . '/vendor/autoload.php';
 
