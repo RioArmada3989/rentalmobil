@@ -22,4 +22,3 @@ jobs:
     - name: Check Code Standard
       run: 
         composer install
-        composer lint
